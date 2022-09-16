@@ -1,0 +1,26 @@
+{
+  "name": "yoong2world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development webpack serve --mode development --host 0.0.0.0 --https",
+    "css": "node-sass --output-style compact -rw ./assets/scss -o ./assets/css  --source-map true"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "yoong2world",
+  "license": "ISC",
+  "bugs": {
+    "url": "local"
+  },
+  "homepage": "",
+  "dependencies": {
+    "node-sass": "^5.0.0",
+    "scss-compile": "^0.1.7"
+  },
+  "devDependencies": {}
+}

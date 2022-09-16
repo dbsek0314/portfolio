@@ -1,0 +1,59 @@
+@import "./variable";
+@import "./mixin";
+
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+
+.font__headline {
+  font-family: "Do Hyeon", sans-serif;
+  font-size: clamp(gpx(72px), gvw(72px), gvw(72px));
+  line-height: 1.33;
+  letter-spacing: -0.015em;
+}
+
+.font__contents_title_1 {
+  font-family: "Do Hyeon", sans-serif;
+  font-size: clamp(gpx(48px), gvw(48px), gvw(48px));
+  line-height: 1.42;
+}
+
+.font__contents_title {
+  font-family: "Do Hyeon", sans-serif;
+  font-size: clamp(gpx(32px), gvw(32px), gvw(32px));
+  line-height: 1.5;
+  letter-spacing: -0.015em;
+}
+
+.font__body_1 {
+  font-family: "Do Hyeon", sans-serif;
+  font-size: clamp(gpx(28px), gvw(28px), gvw(28px));
+  line-height: 1.53;
+  letter-spacing: -0.015em;
+}
+
+.font__body_2 {
+  font-family: Consolas, sans-serif;
+  font-size: clamp(gpx(18px), gvw(18px), gvw(18px));
+  line-height: 1.66;
+  letter-spacing: -0.015em;
+}
+
+.font__caption_1_EN {
+  font-family: Consolas, sans-serif;
+  font-size: clamp(gpx(20px), gvw(20px), gvw(20px));
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0em;
+}
+
+.font__caption_1_KR {
+  font-family: "Do Hyeon", sans-serif;
+  font-size: clamp(gpx(24px), gvw(24px), gvw(24px));
+  line-height: 1.6;
+  letter-spacing: 0em;
+}
+
+.font__num {
+  font-family: "Do Hyeon", sans-serif;
+  font-size: resize(200px);
+  line-height: 1;
+}

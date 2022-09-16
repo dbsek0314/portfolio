@@ -1,0 +1,46 @@
+@import "./variable";
+
+@mixin center_xy {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin center_x {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin center_y {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin dim {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+@function resize($target) {
+  @return clamp(gpx($target), gvw($target), gvw($target));
+}
+
+// px to vw (1281 이상)
+@function gvw($target) {
+  $vw-context: 1920 * 0.01 * 1px;
+  @return $target / $vw-context * 1vw;
+}
+
+// vw to px (1280 이하)
+@function gpx($target) {
+  @return ($target * 1280)/1920;
+}

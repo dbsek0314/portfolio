@@ -1,0 +1,68 @@
+.btn_box {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+
+  span {
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+
+    &.txt {
+      color: #111;
+      border: solid 2px #111;
+      padding: clamp(gpx(20px), gvw(20px), gvw(20px))
+        clamp(gpx(50px), gvw(50px), gvw(50px));
+      box-sizing: border-box;
+    }
+
+    &.txt_hover {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200%;
+      height: 120%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      background-color: #111;
+      color: #fff;
+      clip-path: polygon(0 0, 20% 0, 00% 100%, 0 100%);
+      transition: clip-path 0.8s cubic-bezier(0.18, 0.78, 0.31, 0.92);
+    }
+  }
+
+  &:hover {
+    span.txt {
+      &.txt_hover {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+  }
+
+  &.border {
+    &.white span.txt {
+      border-color: #fff;
+    }
+  }
+
+  &.color {
+    &.white {
+      span {
+        &.txt {
+          color: #fff;
+        }
+        &.txt-hover {
+          background-color: #fff;
+          color: #111;
+        }
+      }
+    }
+  }
+}
